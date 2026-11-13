@@ -30,8 +30,8 @@ class Account(ABC):
 
 class SavingsAccount(Account):
 
-    def __init__(self, owner, interest_rate):
-        super().__init__(owner)
+    def __init__(self, owner, interest_rate, balance=0):
+        super().__init__(owner, balance)
         self.interest_rate = interest_rate
 
     def withdraw(self, amount):
